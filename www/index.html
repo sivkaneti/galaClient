@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers/mainController.js"></script>
+    <script src="js/services/serverService.js"></script>
+  </head>
+  <body ng-app="go-to">
+
+    <ion-pane ng-controller="mainController">
+      <ion-header-bar class="bar-stable">
+        <h1 class="title">Where do you want to go?</h1>
+      </ion-header-bar>
+      <ion-content>
+
+          <div class="list">
+            <label class="item item-input">
+              <input type="text" placeholder="Enter url..." ng-model="form.url"/>
+            </label>
+            <label>
+             <ion-checkbox ng-model="form.redirect">Redirect</ion-checkbox>
+            </label>
+            <button class="button button-positive" ng-click="submitForm(form)">Submit</button>
+          </div>
+
+      </ion-content>
+    </ion-pane>
+  </body>
+</html>

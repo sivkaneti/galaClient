@@ -1,0 +1,21 @@
+{
+  "name": "gala",
+  "app_id": "",
+  "type": "ionic1",
+  "proxies": [
+    {
+      "path": "/url",
+      "proxyUrl": "localhost:3000"
+    }
+  ],
+  "integrations": {
+    "gulp": {},
+    "cordova": {}
+  },
+  "watchPatterns": [
+    "scss/**/*",
+    "www/**/*",
+    "!www/lib/**/*",
+    "!www/**/*.map"
+  ]
+}
